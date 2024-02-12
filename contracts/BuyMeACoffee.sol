@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
 
+// Deployed contract address - 0x8fB41Ef8812eC578f2a5E9bf5de9dd6b96450707
+
 contract BuyMeACoffee {
     address payable owner;
 
