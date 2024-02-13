@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
 
-// Deployed contract address - 0x8fB41Ef8812eC578f2a5E9bf5de9dd6b96450707
+// Deployed contract address - 0x785c92d132f35aB79B3A116FFD813021fD44fA55
 
 contract BuyMeACoffee {
     address payable owner;
@@ -40,5 +40,14 @@ contract BuyMeACoffee {
 
     function getMemos() public view returns(Memo[] memory) {
         return memos;
+    }
+
+    function changeOwner(address _newOwner) public onlyOwner() {
+        owner = payable(_newOwner);
+    }
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Only owner can change the owner's address!");
+        _;
     }
 }
