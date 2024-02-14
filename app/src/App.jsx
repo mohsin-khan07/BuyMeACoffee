@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
+import abi from "./utils/BuyMeACoffee.json";
 import { ethers } from "ethers";
 import { useEffect, useState } from "react";
-import abi from "./utils/BuyMeACoffee.json";
+import { withdrawTips } from "./utils/withdrawTips";
 
 const { ethereum } = window;
 const contractAddress = "0x785c92d132f35aB79B3A116FFD813021fD44fA55";
@@ -10,10 +11,23 @@ const contractAbi = abi.abi;
 const provider = new ethers.providers.Web3Provider(ethereum, "any");
 
 function App() {
+  const runWithdrawTips = async () => {
+    // const res = await provider.getBalance(contractAddress);
+    // const contractBal = ethers.utils.formatEther(res.toString());
+    await withdrawTips(provider, contractAddress, contractAbi);
+  };
+
   return (
     <div className="flex flex-col items-center justify-center gap-10 bg-background pt-16">
       <div className="text-3xl font-medium">
-        Buy <span className="text-4xl text-primary">Mohsin</span> A Coffee!
+        Buy{" "}
+        <span
+          onClick={runWithdrawTips}
+          className="cursor-pointer text-4xl text-primary"
+        >
+          Mohsin
+        </span>{" "}
+        A Coffee!
       </div>
       <SocialIcons />
       <FormCard />
