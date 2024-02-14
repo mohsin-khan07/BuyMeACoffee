@@ -21,10 +21,7 @@ function App() {
     <div className="flex flex-col items-center justify-center gap-10 bg-background pt-16">
       <div className="text-3xl font-medium">
         Buy{" "}
-        <span
-          onClick={runWithdrawTips}
-          className="cursor-pointer text-4xl text-primary"
-        >
+        <span onClick={runWithdrawTips} className="text-4xl text-primary">
           Mohsin
         </span>{" "}
         A Coffee!
