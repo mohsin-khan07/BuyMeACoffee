@@ -1,13 +1,15 @@
-# Sample Hardhat Project
+# Buy Me A Coffee - Decentralized App
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Buy Me A Coffee is a decentralized app similar to buy me a coffee website. In this anyone can send the owner some Ethereum.
 
-Try running some of the following tasks:
+This project is open source so if you want to make your own Buy Me A Coffee app you can fork this repo!
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+# Tech Stack
+
+- [Solidity](https://soliditylang.org/) - Smart Contract
+- [Ethereum](https://ethereum.org/) - Blockchain
+- [React](https://react.dev/) - Front-end Framework
+- [TailwindCSS](https://tailwindcss.com/) - Styling and UI
+- [Ethers.js](https://docs.ethers.org/v5/) - Wallet Integration
+- [Hardhat](https://hardhat.org/) - Smart Contract Deployment
+- [Vercel](https://vercel.com/) - Hosting
